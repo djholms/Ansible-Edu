@@ -1,5 +1,0 @@
----
-- hosts: lb
-  tasks:
-  - debug msg="{{ groups['nodes'] }}"
-  - debug var=groups['nodes']

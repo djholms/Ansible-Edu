@@ -1,5 +1,0 @@
----
-- hosts: an-cent
-  become: true
-  remote_user: holms
-  tasks:
