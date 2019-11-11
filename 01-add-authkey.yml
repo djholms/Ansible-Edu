@@ -1,0 +1,8 @@
+---
+- hosts: hosts
+  tasks:
+   - name: Set authorized key for user holms copying it from current user
+     authorized_key:
+       user: holms
+       state: present
+       key: "{{ lookup('file', lookup('env','HOME') + '/.ssh/ansibletest_rsa.pub') }}"

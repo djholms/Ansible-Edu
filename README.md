@@ -1,2 +1,2 @@
 # Ansible-Edu
-Education tasks for ansible
+Ansible education education tasks
