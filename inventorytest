@@ -1,15 +1,20 @@
-[control-machine]
+[controlmachine]
 localhost ansible_connection=local
 
 [loadbal]
 an-lb
 
-[hosts:children]
+[nodes:children]
 centos
 ubuntu
 suse
 fedora
 debian
+
+[webservers]
+an-cent
+an-suse
+an-fed
 
 
 [centos]
@@ -23,7 +28,7 @@ an-ubnt ansible_host=192.168.200.24
 an-suse ansible_host=192.168.200.25
 
 [fedora]
-an-fed ansible_host=192.168.200.26
+an-fed ansible_host=192.168.200.26 ansible_python_interpreter="/usr/bin/python3"
 
 [debian]
 an-deb ansible_host=192.168.200.27

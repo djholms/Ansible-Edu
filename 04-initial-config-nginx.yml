@@ -1,0 +1,17 @@
+---
+- hosts: webservers
+  tasks:
+
+  - name: set start page on RHEL-bases distros
+    template:
+      src: roles/webservers/templates/index.html.j2
+      dest: "/usr/share/nginx/html/index.html"
+    become: yes
+    when: ansible_os_family=="RedHat"
+
+  - name: set start page on SUSE-bases distros
+    template:
+      src: roles/webservers/templates/index.html.j2
+      dest: "/srv/www/htdocs/index.html"
+    become: yes
+    when: ansible_os_family=="Suse"
