@@ -1,0 +1,24 @@
+---
+#- name: install software on clients nodes
+- hosts: client
+  become: yes
+
+  tasks:
+
+    - name: install archivers
+      package:
+        name: "{{ item }}"
+        state: latest
+      loop: #"{{ zip, unzip, gzip, nano }}"
+      - zip
+      - unzip
+      - gzip
+      - nano
+
+    - name: remove unzip and nano
+      package:
+        name: "{{ item }}"
+        state: absent
+      loop:
+      - unzip
+      - nano

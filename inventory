@@ -16,6 +16,10 @@ an-cent
 an-suse
 an-fed
 
+[client]
+an-fed
+an-ubnt
+an-deb
 
 [centos]
 an-cent ansible_host=192.168.200.23
