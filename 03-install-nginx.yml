@@ -1,0 +1,27 @@
+---
+- hosts: webservers
+  tasks:
+  - name: install nginx
+    package: name=nginx
+    become: yes
+
+  - name: start nginx
+    service: name=nginx state=started enabled=yes
+    become: yes
+
+  - name: allow http and https
+    firewalld:
+      service: "{{ item }}"
+      permanent: yes
+      state: enabled
+    loop:
+      - http
+      - https
+    #when: ansible_distribution=="Fedora"
+    become: yes
+
+  - name: restart firewalld
+    service:
+      name: firewalld
+      state: restarted
+    become: yes

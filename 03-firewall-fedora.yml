@@ -1,0 +1,13 @@
+---
+- hosts: webservers
+  tasks:
+  - name: allow http and https
+    firewalld:
+      service: "{{ item }}"
+      permanent: yes
+      state: enabled
+    loop:
+      - http
+      - https
+#    when: ansible_distribution=="Fedora"
+    become: yes

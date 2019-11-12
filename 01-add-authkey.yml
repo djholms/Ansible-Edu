@@ -1,5 +1,5 @@
 ---
-- hosts: hosts
+- hosts: nodes
   tasks:
    - name: Set authorized key for user holms copying it from current user
      authorized_key:

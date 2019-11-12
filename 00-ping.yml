@@ -1,6 +1,5 @@
 ---
-  - hosts: hosts
+  - hosts: nodes
     tasks:
       - name: ping hosts
         ping:
-        

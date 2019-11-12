@@ -1,0 +1,24 @@
+---
+- hosts: webservers
+  tasks:
+
+  - name: Install DNF on legacy CentOS
+    yum:
+      name: "dnf"
+      state: latest
+    become: yes
+    when: ansible_distribution=="CentOS" and ansible_distribution_major_version=="7"
+
+  - name: update RHEL-bases systems
+    dnf:
+      name: '*'
+      state: latest
+    become: yes
+    when: ansible_os_family=="RedHat"
+
+  - name: update SUSE systems
+    zypper:
+      name: '*'
+      state: latest
+    become: yes
+    when: ansible_os_family=="Suse"
