@@ -1,0 +1,7 @@
+- hosts: webservers:!loadbal
+  roles:
+    - nginx-backend
+
+- hosts: loadbal
+  roles:
+    - nginx-lb

@@ -1,0 +1,7 @@
+---
+  - name: Configure Load Balancer
+    copy:
+      src: roles/webservers/templates/nginx-lb.conf
+      dest: /etc/nginx/nginx.conf
+    become: yes
+    notify: restart nginx

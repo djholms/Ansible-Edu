@@ -1,0 +1,16 @@
+- hosts: loadbal
+
+  tasks:
+  - name: Configure Load Balancer
+    copy:
+      src: roles/webservers/templates/nginx-lb.conf
+      dest: /etc/nginx/nginx.conf
+    become: yes
+    notify: restart nginx
+
+  handlers:
+  - name: restart nginx
+    service:
+      name: nginx
+      state: restarted
+    become: yes

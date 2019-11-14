@@ -2,7 +2,8 @@
 localhost ansible_connection=local
 
 [loadbal]
-an-lb
+#an-lb
+an-suse
 
 [nodes:children]
 centos
@@ -13,8 +14,9 @@ debian
 
 [webservers]
 an-cent
-an-suse
+#an-suse
 an-fed
+an-lb
 
 [client]
 an-fed
