@@ -1,0 +1,63 @@
+2019-11-14 20:01:29,123 p=9297 u=holms |  PLAY [webservers:!loadbal] ******************************************************************************
+2019-11-14 20:01:29,135 p=9297 u=holms |  TASK [Gathering Facts] **********************************************************************************
+2019-11-14 20:01:32,537 p=9297 u=holms |  ok: [an-fed]
+2019-11-14 20:01:33,856 p=9297 u=holms |  ok: [an-lb]
+2019-11-14 20:01:33,954 p=9297 u=holms |  ok: [an-cent]
+2019-11-14 20:01:33,975 p=9297 u=holms |  TASK [nginx-base : setup nginx] *************************************************************************
+2019-11-14 20:01:34,081 p=9297 u=holms |  included: /home/holms/projects/ansible-edu/roles/nginx-base/tasks/install-nginx.yml for an-cent, an-fed, an-lb
+2019-11-14 20:01:34,102 p=9297 u=holms |  TASK [nginx-base : install nginx] ***********************************************************************
+2019-11-14 20:01:38,024 p=9297 u=holms |  ok: [an-cent]
+2019-11-14 20:01:38,092 p=9297 u=holms |  ok: [an-lb]
+2019-11-14 20:01:49,239 p=9297 u=holms |  changed: [an-fed]
+2019-11-14 20:01:49,261 p=9297 u=holms |  TASK [nginx-base : start nginx] *************************************************************************
+2019-11-14 20:01:49,389 p=9297 u=holms |  included: /home/holms/projects/ansible-edu/roles/nginx-base/tasks/start-nginx.yml for an-cent, an-fed, an-lb
+2019-11-14 20:01:49,416 p=9297 u=holms |  TASK [nginx-base : start nginx] *************************************************************************
+2019-11-14 20:01:51,844 p=9297 u=holms |  ok: [an-lb]
+2019-11-14 20:01:51,874 p=9297 u=holms |  ok: [an-cent]
+2019-11-14 20:01:53,503 p=9297 u=holms |  changed: [an-fed]
+2019-11-14 20:01:53,520 p=9297 u=holms |  TASK [nginx-base : configure firewall] ******************************************************************
+2019-11-14 20:01:53,624 p=9297 u=holms |  included: /home/holms/projects/ansible-edu/roles/nginx-base/tasks/configure-firewall.yml for an-cent, an-fed, an-lb
+2019-11-14 20:01:53,649 p=9297 u=holms |  TASK [nginx-base : allow http and https] ****************************************************************
+2019-11-14 20:01:56,147 p=9297 u=holms |  ok: [an-lb] => (item=http)
+2019-11-14 20:01:56,162 p=9297 u=holms |  ok: [an-cent] => (item=http)
+2019-11-14 20:01:56,245 p=9297 u=holms |  ok: [an-fed] => (item=http)
+2019-11-14 20:01:58,398 p=9297 u=holms |  ok: [an-lb] => (item=https)
+2019-11-14 20:01:58,402 p=9297 u=holms |  ok: [an-cent] => (item=https)
+2019-11-14 20:01:58,554 p=9297 u=holms |  ok: [an-fed] => (item=https)
+2019-11-14 20:01:58,575 p=9297 u=holms |  TASK [nginx-backend : set start page on RHEL-bases distros] *********************************************
+2019-11-14 20:02:01,672 p=9297 u=holms |  ok: [an-cent]
+2019-11-14 20:02:01,755 p=9297 u=holms |  ok: [an-lb]
+2019-11-14 20:02:02,509 p=9297 u=holms |  changed: [an-fed]
+2019-11-14 20:02:02,530 p=9297 u=holms |  TASK [nginx-backend : set start page on SUSE-bases distros] *********************************************
+2019-11-14 20:02:02,558 p=9297 u=holms |  skipping: [an-cent]
+2019-11-14 20:02:02,583 p=9297 u=holms |  skipping: [an-fed]
+2019-11-14 20:02:02,593 p=9297 u=holms |  skipping: [an-lb]
+2019-11-14 20:02:02,603 p=9297 u=holms |  PLAY [loadbal] ******************************************************************************************
+2019-11-14 20:02:02,611 p=9297 u=holms |  TASK [Gathering Facts] **********************************************************************************
+2019-11-14 20:02:06,559 p=9297 u=holms |  ok: [an-suse]
+2019-11-14 20:02:06,579 p=9297 u=holms |  TASK [nginx-base : setup nginx] *************************************************************************
+2019-11-14 20:02:06,608 p=9297 u=holms |  included: /home/holms/projects/ansible-edu/roles/nginx-base/tasks/install-nginx.yml for an-suse
+2019-11-14 20:02:06,629 p=9297 u=holms |  TASK [nginx-base : install nginx] ***********************************************************************
+2019-11-14 20:02:18,316 p=9297 u=holms |  changed: [an-suse]
+2019-11-14 20:02:18,337 p=9297 u=holms |  TASK [nginx-base : start nginx] *************************************************************************
+2019-11-14 20:02:18,368 p=9297 u=holms |  included: /home/holms/projects/ansible-edu/roles/nginx-base/tasks/start-nginx.yml for an-suse
+2019-11-14 20:02:18,393 p=9297 u=holms |  TASK [nginx-base : start nginx] *************************************************************************
+2019-11-14 20:02:21,595 p=9297 u=holms |  changed: [an-suse]
+2019-11-14 20:02:21,614 p=9297 u=holms |  TASK [nginx-base : configure firewall] ******************************************************************
+2019-11-14 20:02:21,646 p=9297 u=holms |  included: /home/holms/projects/ansible-edu/roles/nginx-base/tasks/configure-firewall.yml for an-suse
+2019-11-14 20:02:21,668 p=9297 u=holms |  TASK [nginx-base : allow http and https] ****************************************************************
+2019-11-14 20:02:24,259 p=9297 u=holms |  changed: [an-suse] => (item=http)
+2019-11-14 20:02:26,920 p=9297 u=holms |  changed: [an-suse] => (item=https)
+2019-11-14 20:02:26,951 p=9297 u=holms |  TASK [nginx-lb : configure load balancer] ***************************************************************
+2019-11-14 20:02:26,982 p=9297 u=holms |  included: /home/holms/projects/ansible-edu/roles/nginx-lb/tasks/config-lb.yml for an-suse
+2019-11-14 20:02:27,001 p=9297 u=holms |  TASK [nginx-lb : Configure Load Balancer] ***************************************************************
+2019-11-14 20:02:31,018 p=9297 u=holms |  changed: [an-suse]
+2019-11-14 20:02:31,019 p=9297 u=holms |  RUNNING HANDLER [nginx-base : restart firewalld] ********************************************************
+2019-11-14 20:02:36,238 p=9297 u=holms |  changed: [an-suse]
+2019-11-14 20:02:36,239 p=9297 u=holms |  RUNNING HANDLER [nginx-lb : restart nginx] **************************************************************
+2019-11-14 20:02:41,563 p=9297 u=holms |  changed: [an-suse]
+2019-11-14 20:02:41,564 p=9297 u=holms |  PLAY RECAP **********************************************************************************************
+2019-11-14 20:02:41,565 p=9297 u=holms |  an-cent                    : ok=8    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-11-14 20:02:41,565 p=9297 u=holms |  an-fed                     : ok=8    changed=3    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-11-14 20:02:41,565 p=9297 u=holms |  an-lb                      : ok=8    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-11-14 20:02:41,565 p=9297 u=holms |  an-suse                    : ok=11   changed=6    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

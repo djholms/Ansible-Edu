@@ -1,7 +1,10 @@
+# info:
+# source version of playbook nginx-base role
+
 ---
 - hosts: webservers
   tasks:
-# First version of nginx install code    
+# First version of nginx install code
   - name: install nginx
     package: name=nginx
     become: yes

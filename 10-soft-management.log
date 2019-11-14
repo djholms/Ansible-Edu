@@ -1,0 +1,42 @@
+2019-11-14 18:13:30,098 p=31224 u=holms |  PLAY [client] *******************************************************************************************
+2019-11-14 18:13:30,110 p=31224 u=holms |  TASK [Gathering Facts] **********************************************************************************
+2019-11-14 18:13:33,224 p=31224 u=holms |  ok: [an-deb]
+2019-11-14 18:13:34,810 p=31224 u=holms |  ok: [an-fed]
+2019-11-14 18:13:35,335 p=31224 u=holms |  ok: [an-ubnt]
+2019-11-14 18:13:35,357 p=31224 u=holms |  TASK [package-mgmt : install archivers] *****************************************************************
+2019-11-14 18:13:37,296 p=31224 u=holms |  ok: [an-deb] => (item=zip)
+2019-11-14 18:13:37,941 p=31224 u=holms |  ok: [an-ubnt] => (item=zip)
+2019-11-14 18:13:42,675 p=31224 u=holms |  changed: [an-deb] => (item=unzip)
+2019-11-14 18:13:44,308 p=31224 u=holms |  ok: [an-deb] => (item=gzip)
+2019-11-14 18:13:50,104 p=31224 u=holms |  changed: [an-fed] => (item=zip)
+2019-11-14 18:13:50,806 p=31224 u=holms |  changed: [an-deb] => (item=nano)
+2019-11-14 18:13:50,807 p=31224 u=holms |  [WARNING]: Could not find aptitude. Using apt-get instead
+
+2019-11-14 18:13:51,134 p=31224 u=holms |  changed: [an-ubnt] => (item=unzip)
+2019-11-14 18:13:53,431 p=31224 u=holms |  ok: [an-ubnt] => (item=gzip)
+2019-11-14 18:14:01,613 p=31224 u=holms |  ok: [an-fed] => (item=unzip)
+2019-11-14 18:14:05,659 p=31224 u=holms |  changed: [an-ubnt] => (item=nano)
+2019-11-14 18:14:11,914 p=31224 u=holms |  ok: [an-fed] => (item=gzip)
+2019-11-14 18:14:24,917 p=31224 u=holms |  changed: [an-fed] => (item=nano)
+2019-11-14 18:14:24,921 p=31224 u=holms |  PLAY RECAP **********************************************************************************************
+2019-11-14 18:14:24,921 p=31224 u=holms |  an-deb                     : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-11-14 18:14:24,921 p=31224 u=holms |  an-fed                     : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-11-14 18:14:24,921 p=31224 u=holms |  an-ubnt                    : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-11-14 18:14:32,566 p=31457 u=holms |  PLAY [client] *******************************************************************************************
+2019-11-14 18:14:32,577 p=31457 u=holms |  TASK [Gathering Facts] **********************************************************************************
+2019-11-14 18:14:35,132 p=31457 u=holms |  ok: [an-deb]
+2019-11-14 18:14:35,893 p=31457 u=holms |  ok: [an-fed]
+2019-11-14 18:14:35,897 p=31457 u=holms |  ok: [an-ubnt]
+2019-11-14 18:14:35,919 p=31457 u=holms |  TASK [package-mgmt : remove unzip and nano] *************************************************************
+2019-11-14 18:14:40,631 p=31457 u=holms |  changed: [an-deb] => (item=unzip)
+2019-11-14 18:14:45,727 p=31457 u=holms |  changed: [an-deb] => (item=nano)
+2019-11-14 18:14:45,729 p=31457 u=holms |  [WARNING]: Could not find aptitude. Using apt-get instead
+
+2019-11-14 18:14:47,185 p=31457 u=holms |  changed: [an-ubnt] => (item=unzip)
+2019-11-14 18:14:51,953 p=31457 u=holms |  changed: [an-fed] => (item=unzip)
+2019-11-14 18:14:58,036 p=31457 u=holms |  changed: [an-ubnt] => (item=nano)
+2019-11-14 18:15:05,262 p=31457 u=holms |  changed: [an-fed] => (item=nano)
+2019-11-14 18:15:05,265 p=31457 u=holms |  PLAY RECAP **********************************************************************************************
+2019-11-14 18:15:05,266 p=31457 u=holms |  an-deb                     : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-11-14 18:15:05,266 p=31457 u=holms |  an-fed                     : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-11-14 18:15:05,266 p=31457 u=holms |  an-ubnt                    : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

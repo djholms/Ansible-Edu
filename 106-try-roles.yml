@@ -1,4 +1,0 @@
-- hosts: nodes
-# simple try using roles. Not needed
-  roles:
-  - webservers

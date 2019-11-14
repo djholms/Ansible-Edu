@@ -1,4 +1,15 @@
 ---
+
+  - name: setup nginx
+    include_tasks: install-nginx.yml
+
+  - name: start nginx
+    include_tasks: start-nginx.yml
+
+  - name: configure firewall
+    include_tasks: configure-firewall.yml
+
+
 # tasks file for nginx-base
 
 #- name: install nginx

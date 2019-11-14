@@ -1,3 +1,6 @@
+# info:
+# source version of playbook nginx-lb role
+---
 - hosts: loadbal
 
   tasks:

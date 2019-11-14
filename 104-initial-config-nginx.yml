@@ -1,3 +1,5 @@
+# info:
+# source version of playbook nginx-backend role
 ---
 - hosts: webservers
   tasks:

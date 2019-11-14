@@ -1,5 +1,6 @@
 ---
-#- name: install software on clients nodes
+# info:
+# source version of playbook 10-soft-mgmt
 - hosts: client
   become: yes
 

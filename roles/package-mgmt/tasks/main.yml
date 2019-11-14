@@ -1,9 +1,9 @@
-- include: install.yml
+- import_tasks: install.yml
   tags:
     - install
     - never
 
-- include: uninstall.yml
+- import_tasks: uninstall.yml
   tags:
     - uninstall
     - never

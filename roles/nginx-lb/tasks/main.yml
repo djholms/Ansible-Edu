@@ -1,7 +1,5 @@
 ---
-  - name: Configure Load Balancer
-    copy:
-      src: roles/webservers/templates/nginx-lb.conf
-      dest: /etc/nginx/nginx.conf
-    become: yes
-    notify: restart nginx
+
+
+  - name: configure load balancer
+    include_tasks: config-lb.yml
