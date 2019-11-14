@@ -1,0 +1,21 @@
+- package_facts:
+
+- name: get details about nginx
+  shell: /usr/sbin/nginx -V 2>&1 | grep 'nginx version' | sed 's/.*:\ //'
+  register: nginx_version
+  listen: save details
+
+- name: create fact folder for ansible
+  file: path=/etc/ansible/facts.d state=directory
+  become: yes
+  listen: save details
+
+- name: store nginx details
+  copy:
+    content: |
+      {
+        "version": "{{ nginx_version.stdout }}"
+      }
+    dest: /etc/ansible/facts.d/nginx.fact
+  become: yes
+  listen: save details

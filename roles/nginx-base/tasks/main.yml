@@ -1,44 +1,44 @@
 ---
 # tasks file for nginx-base
 
-- name: install nginx
-  package: name=nginx
-  become: yes
-  notify: save details
+#- name: install nginx
+#  package: name=nginx
+#  become: yes
+#  notify: save details
 
-- name: start nginx
-  service: name=nginx state=started enabled=yes
-  become: yes
+#- name: start nginx
+#  service: name=nginx state=started enabled=yes
+#  become: yes
 
-- package_facts:
+#- package_facts:
 #- name: get details about nginx
 #  shell: /usr/sbin/nginx -V 2>&1 | grep 'nginx version' | sed 's/.*:\ //'
 #  register: nginx_version
 #  listen: save details
 
-- name: create fact folder for ansible
-  file: path=/etc/ansible/facts.d state=directory
-  become: yes
+#- name: create fact folder for ansible
+#  file: path=/etc/ansible/facts.d state=directory
+#  become: yes
 #  listen: save details
 
-- name: store nginx details
-  copy:
-    content: |
-      {
-        "version": "{{ ansible_facts.packages.nginx[0].version }}"
-      }
-    dest: /etc/ansible/facts.d/nginx.fact
-  become: yes
+#- name: store nginx details
+#  copy:
+#    content: |
+#      {
+#        "version": "{{ ansible_facts.packages.nginx[0].version }}"
+#      }
+#    dest: /etc/ansible/facts.d/nginx.fact
+#  become: yes
 #  listen: save details
 
-- name: allow http and https
-  firewalld:
-    service: "{{ item }}"
-    permanent: yes
-    state: enabled
-    loop:
-      - http
-      - https
+#- name: allow http and https
+#  firewalld:
+#    service: "{{ item }}"
+#    permanent: yes
+#    state: enabled
+#    loop:
+#      - http
+#      - https
     #when: ansible_distribution=="Fedora"
-    become: yes
-    notify: restart firewall
+#    become: yes
+#    notify: restart firewall

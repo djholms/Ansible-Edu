@@ -1,7 +1,7 @@
 ---
-  - name: restart firewalld
-    service:
-      name: firewalld
-      state: restarted
-    become: yes
-    listen: restart firewall
+#  - name: restart firewalld
+#    service:
+#      name: firewalld
+#      state: restarted
+#    become: yes
+#    listen: restart firewall

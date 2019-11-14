@@ -1,0 +1,5 @@
+  - name: set start page on SUSE-bases distros
+    template:
+      src: roles/webservers/templates/index.html.j2
+      dest: "/srv/www/htdocs/index.html"
+    become: yes

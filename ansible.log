@@ -1398,3 +1398,174 @@
 2019-11-13 23:47:29,000 p=12851 u=holms |  an-fed                     : ok=7    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
 2019-11-13 23:47:29,000 p=12851 u=holms |  an-lb                      : ok=7    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
 2019-11-13 23:47:29,000 p=12851 u=holms |  an-suse                    : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-11-14 16:26:26,260 p=26122 u=holms |  PLAY [webservers:!loadbal] ******************************************************************************
+2019-11-14 16:26:26,273 p=26122 u=holms |  TASK [Gathering Facts] **********************************************************************************
+2019-11-14 16:26:30,472 p=26122 u=holms |  ok: [an-fed]
+2019-11-14 16:26:31,142 p=26122 u=holms |  ok: [an-lb]
+2019-11-14 16:26:31,165 p=26122 u=holms |  ok: [an-cent]
+2019-11-14 16:26:31,186 p=26122 u=holms |  TASK [nginx-base : install nginx] ***********************************************************************
+2019-11-14 16:26:35,146 p=26122 u=holms |  ok: [an-lb]
+2019-11-14 16:26:35,184 p=26122 u=holms |  ok: [an-cent]
+2019-11-14 16:26:41,833 p=26122 u=holms |  ok: [an-fed]
+2019-11-14 16:26:41,854 p=26122 u=holms |  TASK [nginx-base : start nginx] *************************************************************************
+2019-11-14 16:26:44,287 p=26122 u=holms |  ok: [an-lb]
+2019-11-14 16:26:44,304 p=26122 u=holms |  ok: [an-cent]
+2019-11-14 16:26:44,511 p=26122 u=holms |  ok: [an-fed]
+2019-11-14 16:26:44,532 p=26122 u=holms |  TASK [nginx-base : package_facts] ***********************************************************************
+2019-11-14 16:26:47,335 p=26122 u=holms |  ok: [an-fed]
+2019-11-14 16:26:47,824 p=26122 u=holms |  ok: [an-lb]
+2019-11-14 16:26:47,897 p=26122 u=holms |  ok: [an-cent]
+2019-11-14 16:26:48,014 p=26122 u=holms |  TASK [nginx-base : create fact folder for ansible] ******************************************************
+2019-11-14 16:26:49,754 p=26122 u=holms |  ok: [an-cent]
+2019-11-14 16:26:49,885 p=26122 u=holms |  ok: [an-lb]
+2019-11-14 16:26:49,995 p=26122 u=holms |  ok: [an-fed]
+2019-11-14 16:26:50,118 p=26122 u=holms |  TASK [nginx-base : store nginx details] *****************************************************************
+2019-11-14 16:26:53,108 p=26122 u=holms |  ok: [an-cent]
+2019-11-14 16:26:53,257 p=26122 u=holms |  ok: [an-lb]
+2019-11-14 16:26:54,405 p=26122 u=holms |  ok: [an-fed]
+2019-11-14 16:26:54,523 p=26122 u=holms |  TASK [nginx-base : allow http and https] ****************************************************************
+2019-11-14 16:26:54,645 p=26122 u=holms |  fatal: [an-cent]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined\n\nThe error appears to be in '/home/holms/projects/ansible-edu/roles/nginx-base/tasks/main.yml': line 34, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: allow http and https\n  ^ here\n"}
+2019-11-14 16:26:54,772 p=26122 u=holms |  fatal: [an-fed]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined\n\nThe error appears to be in '/home/holms/projects/ansible-edu/roles/nginx-base/tasks/main.yml': line 34, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: allow http and https\n  ^ here\n"}
+2019-11-14 16:26:54,781 p=26122 u=holms |  fatal: [an-lb]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined\n\nThe error appears to be in '/home/holms/projects/ansible-edu/roles/nginx-base/tasks/main.yml': line 34, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: allow http and https\n  ^ here\n"}
+2019-11-14 16:26:54,783 p=26122 u=holms |  PLAY RECAP **********************************************************************************************
+2019-11-14 16:26:54,783 p=26122 u=holms |  an-cent                    : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-11-14 16:26:54,783 p=26122 u=holms |  an-fed                     : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-11-14 16:26:54,784 p=26122 u=holms |  an-lb                      : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-11-14 16:30:38,774 p=26425 u=holms |  PLAY [webservers] ***************************************************************************************
+2019-11-14 16:30:38,784 p=26425 u=holms |  TASK [Gathering Facts] **********************************************************************************
+2019-11-14 16:30:42,897 p=26425 u=holms |  ok: [an-fed]
+2019-11-14 16:30:43,621 p=26425 u=holms |  ok: [an-lb]
+2019-11-14 16:30:43,630 p=26425 u=holms |  ok: [an-cent]
+2019-11-14 16:30:43,650 p=26425 u=holms |  TASK [install nginx] ************************************************************************************
+2019-11-14 16:30:47,527 p=26425 u=holms |  ok: [an-cent]
+2019-11-14 16:30:47,685 p=26425 u=holms |  ok: [an-lb]
+2019-11-14 16:30:54,425 p=26425 u=holms |  ok: [an-fed]
+2019-11-14 16:30:54,446 p=26425 u=holms |  TASK [start nginx] **************************************************************************************
+2019-11-14 16:30:56,853 p=26425 u=holms |  ok: [an-cent]
+2019-11-14 16:30:56,938 p=26425 u=holms |  ok: [an-lb]
+2019-11-14 16:30:57,156 p=26425 u=holms |  ok: [an-fed]
+2019-11-14 16:30:57,177 p=26425 u=holms |  TASK [allow http and https] *****************************************************************************
+2019-11-14 16:30:59,470 p=26425 u=holms |  ok: [an-cent] => (item=http)
+2019-11-14 16:30:59,490 p=26425 u=holms |  ok: [an-lb] => (item=http)
+2019-11-14 16:30:59,687 p=26425 u=holms |  ok: [an-fed] => (item=http)
+2019-11-14 16:31:01,621 p=26425 u=holms |  ok: [an-lb] => (item=https)
+2019-11-14 16:31:01,626 p=26425 u=holms |  ok: [an-cent] => (item=https)
+2019-11-14 16:31:02,019 p=26425 u=holms |  ok: [an-fed] => (item=https)
+2019-11-14 16:31:02,022 p=26425 u=holms |  PLAY RECAP **********************************************************************************************
+2019-11-14 16:31:02,022 p=26425 u=holms |  an-cent                    : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-11-14 16:31:02,023 p=26425 u=holms |  an-fed                     : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-11-14 16:31:02,023 p=26425 u=holms |  an-lb                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-11-14 16:43:31,487 p=26930 u=holms |  PLAY [webservers:!loadbal] ******************************************************************************
+2019-11-14 16:43:31,497 p=26930 u=holms |  TASK [Gathering Facts] **********************************************************************************
+2019-11-14 16:43:35,610 p=26930 u=holms |  ok: [an-fed]
+2019-11-14 16:43:36,347 p=26930 u=holms |  ok: [an-lb]
+2019-11-14 16:43:36,353 p=26930 u=holms |  ok: [an-cent]
+2019-11-14 16:43:36,373 p=26930 u=holms |  TASK [nginx-backend : set start page on RHEL-bases distros] *********************************************
+2019-11-14 16:43:39,466 p=26930 u=holms |  ok: [an-lb]
+2019-11-14 16:43:39,899 p=26930 u=holms |  ok: [an-fed]
+2019-11-14 16:43:39,912 p=26930 u=holms |  changed: [an-cent]
+2019-11-14 16:43:39,930 p=26930 u=holms |  TASK [nginx-backend : set start page on SUSE-bases distros] *********************************************
+2019-11-14 16:43:39,961 p=26930 u=holms |  skipping: [an-cent]
+2019-11-14 16:43:39,989 p=26930 u=holms |  skipping: [an-fed]
+2019-11-14 16:43:40,005 p=26930 u=holms |  skipping: [an-lb]
+2019-11-14 16:43:40,013 p=26930 u=holms |  PLAY [loadbal] ******************************************************************************************
+2019-11-14 16:43:40,020 p=26930 u=holms |  TASK [Gathering Facts] **********************************************************************************
+2019-11-14 16:43:44,072 p=26930 u=holms |  ok: [an-suse]
+2019-11-14 16:43:44,093 p=26930 u=holms |  TASK [nginx-lb : Configure Load Balancer] ***************************************************************
+2019-11-14 16:43:47,638 p=26930 u=holms |  ok: [an-suse]
+2019-11-14 16:43:47,640 p=26930 u=holms |  PLAY RECAP **********************************************************************************************
+2019-11-14 16:43:47,640 p=26930 u=holms |  an-cent                    : ok=2    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-11-14 16:43:47,641 p=26930 u=holms |  an-fed                     : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-11-14 16:43:47,641 p=26930 u=holms |  an-lb                      : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-11-14 16:43:47,641 p=26930 u=holms |  an-suse                    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-11-14 16:44:42,537 p=27106 u=holms |  PLAY [webservers:!loadbal] ******************************************************************************
+2019-11-14 16:44:42,548 p=27106 u=holms |  TASK [Gathering Facts] **********************************************************************************
+2019-11-14 16:44:46,081 p=27106 u=holms |  ok: [an-fed]
+2019-11-14 16:44:46,995 p=27106 u=holms |  ok: [an-lb]
+2019-11-14 16:44:47,098 p=27106 u=holms |  ok: [an-cent]
+2019-11-14 16:44:47,121 p=27106 u=holms |  TASK [nginx-backend : set start page on RHEL-bases distros] *********************************************
+2019-11-14 16:44:50,252 p=27106 u=holms |  ok: [an-lb]
+2019-11-14 16:44:50,337 p=27106 u=holms |  ok: [an-cent]
+2019-11-14 16:44:50,588 p=27106 u=holms |  ok: [an-fed]
+2019-11-14 16:44:50,607 p=27106 u=holms |  TASK [nginx-backend : set start page on SUSE-bases distros] *********************************************
+2019-11-14 16:44:50,637 p=27106 u=holms |  skipping: [an-cent]
+2019-11-14 16:44:50,662 p=27106 u=holms |  skipping: [an-fed]
+2019-11-14 16:44:50,672 p=27106 u=holms |  skipping: [an-lb]
+2019-11-14 16:44:50,685 p=27106 u=holms |  PLAY [loadbal] ******************************************************************************************
+2019-11-14 16:44:50,694 p=27106 u=holms |  TASK [Gathering Facts] **********************************************************************************
+2019-11-14 16:44:54,425 p=27106 u=holms |  ok: [an-suse]
+2019-11-14 16:44:54,448 p=27106 u=holms |  TASK [nginx-lb : Configure Load Balancer] ***************************************************************
+2019-11-14 16:44:58,090 p=27106 u=holms |  ok: [an-suse]
+2019-11-14 16:44:58,091 p=27106 u=holms |  PLAY RECAP **********************************************************************************************
+2019-11-14 16:44:58,091 p=27106 u=holms |  an-cent                    : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-11-14 16:44:58,092 p=27106 u=holms |  an-fed                     : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-11-14 16:44:58,092 p=27106 u=holms |  an-lb                      : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-11-14 16:44:58,092 p=27106 u=holms |  an-suse                    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-11-14 16:49:34,625 p=27490 u=holms |  PLAY [webservers:!loadbal] ******************************************************************************
+2019-11-14 16:49:34,639 p=27490 u=holms |  TASK [Gathering Facts] **********************************************************************************
+2019-11-14 16:49:39,534 p=27490 u=holms |  ok: [an-fed]
+2019-11-14 16:49:39,954 p=27490 u=holms |  ok: [an-lb]
+2019-11-14 16:49:40,028 p=27490 u=holms |  ok: [an-cent]
+2019-11-14 16:49:40,053 p=27490 u=holms |  TASK [nginx-backend : set start page on RHEL-bases distros] *********************************************
+2019-11-14 16:49:43,351 p=27490 u=holms |  ok: [an-lb]
+2019-11-14 16:49:43,372 p=27490 u=holms |  ok: [an-cent]
+2019-11-14 16:49:43,576 p=27490 u=holms |  ok: [an-fed]
+2019-11-14 16:49:43,606 p=27490 u=holms |  TASK [nginx-backend : set start page on SUSE-bases distros] *********************************************
+2019-11-14 16:49:43,647 p=27490 u=holms |  skipping: [an-cent]
+2019-11-14 16:49:43,678 p=27490 u=holms |  skipping: [an-fed]
+2019-11-14 16:49:43,691 p=27490 u=holms |  skipping: [an-lb]
+2019-11-14 16:49:43,703 p=27490 u=holms |  PLAY [loadbal] ******************************************************************************************
+2019-11-14 16:49:43,712 p=27490 u=holms |  TASK [Gathering Facts] **********************************************************************************
+2019-11-14 16:49:47,504 p=27490 u=holms |  ok: [an-suse]
+2019-11-14 16:49:47,532 p=27490 u=holms |  TASK [nginx-lb : Configure Load Balancer] ***************************************************************
+2019-11-14 16:49:51,164 p=27490 u=holms |  ok: [an-suse]
+2019-11-14 16:49:51,166 p=27490 u=holms |  PLAY RECAP **********************************************************************************************
+2019-11-14 16:49:51,166 p=27490 u=holms |  an-cent                    : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-11-14 16:49:51,167 p=27490 u=holms |  an-fed                     : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-11-14 16:49:51,167 p=27490 u=holms |  an-lb                      : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-11-14 16:49:51,167 p=27490 u=holms |  an-suse                    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-11-14 16:56:28,838 p=27935 u=holms |  ansible-playbook 2.8.6
+  config file = /home/holms/projects/ansible-edu/ansible.cfg
+  configured module search path = ['/home/holms/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.6/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.6.8 (default, Oct 11 2019, 15:04:54) [GCC 8.3.1 20190507 (Red Hat 8.3.1-4)]
+2019-11-14 16:56:28,838 p=27935 u=holms |  Using /home/holms/projects/ansible-edu/ansible.cfg as config file
+2019-11-14 16:56:29,142 p=27935 u=holms |  statically imported: /home/holms/projects/ansible-edu/roles/nginx-backend/tasks/set-startpage-rhel.yml
+2019-11-14 16:56:29,144 p=27935 u=holms |  statically imported: /home/holms/projects/ansible-edu/roles/nginx-backend/tasks/set-startpage-suse.yml
+2019-11-14 16:56:29,215 p=27935 u=holms |  PLAYBOOK: 03-install-nginx.yml **************************************************************************
+2019-11-14 16:56:29,215 p=27935 u=holms |  2 plays in 03-install-nginx.yml
+2019-11-14 16:56:29,239 p=27935 u=holms |  PLAY [webservers:!loadbal] ******************************************************************************
+2019-11-14 16:56:29,255 p=27935 u=holms |  TASK [Gathering Facts] **********************************************************************************
+2019-11-14 16:56:29,255 p=27935 u=holms |  task path: /home/holms/projects/ansible-edu/03-install-nginx.yml:1
+2019-11-14 16:56:33,402 p=27935 u=holms |  ok: [an-fed]
+2019-11-14 16:56:34,082 p=27935 u=holms |  ok: [an-lb]
+2019-11-14 16:56:34,143 p=27935 u=holms |  ok: [an-cent]
+2019-11-14 16:56:34,145 p=27935 u=holms |  META: ran handlers
+2019-11-14 16:56:34,168 p=27935 u=holms |  TASK [nginx-backend : set start page on RHEL-bases distros] *********************************************
+2019-11-14 16:56:34,168 p=27935 u=holms |  task path: /home/holms/projects/ansible-edu/roles/nginx-backend/tasks/set-startpage-rhel.yml:1
+2019-11-14 16:56:37,291 p=27935 u=holms |  ok: [an-lb] => {"changed": false, "checksum": "25bcc0f4f26499d171b86e887e0bff70e494a8b8", "dest": "/usr/share/nginx/html/index.html", "gid": 0, "group": "root", "mode": "0644", "owner": "root", "path": "/usr/share/nginx/html/index.html", "secontext": "system_u:object_r:httpd_sys_content_t:s0", "size": 137, "state": "file", "uid": 0}
+2019-11-14 16:56:37,293 p=27935 u=holms |  ok: [an-cent] => {"changed": false, "checksum": "6ed8cf045c2d0d8a6e6fd5ba0f9781ca97167e01", "dest": "/usr/share/nginx/html/index.html", "gid": 0, "group": "root", "mode": "0644", "owner": "root", "path": "/usr/share/nginx/html/index.html", "secontext": "system_u:object_r:httpd_sys_content_t:s0", "size": 141, "state": "file", "uid": 0}
+2019-11-14 16:56:37,492 p=27935 u=holms |  ok: [an-fed] => {"changed": false, "checksum": "5cf869d92da6eb50a38f8529c61838c08f26c4a8", "dest": "/usr/share/nginx/html/index.html", "gid": 0, "group": "root", "mode": "0644", "owner": "root", "path": "/usr/share/nginx/html/index.html", "secontext": "unconfined_u:object_r:httpd_sys_content_t:s0", "size": 140, "state": "file", "uid": 0}
+2019-11-14 16:56:37,510 p=27935 u=holms |  TASK [nginx-backend : set start page on SUSE-bases distros] *********************************************
+2019-11-14 16:56:37,510 p=27935 u=holms |  task path: /home/holms/projects/ansible-edu/roles/nginx-backend/tasks/set-startpage-suse.yml:1
+2019-11-14 16:56:37,537 p=27935 u=holms |  skipping: [an-cent] => {"changed": false, "skip_reason": "Conditional result was False"}
+2019-11-14 16:56:37,567 p=27935 u=holms |  skipping: [an-fed] => {"changed": false, "skip_reason": "Conditional result was False"}
+2019-11-14 16:56:37,578 p=27935 u=holms |  skipping: [an-lb] => {"changed": false, "skip_reason": "Conditional result was False"}
+2019-11-14 16:56:37,579 p=27935 u=holms |  META: ran handlers
+2019-11-14 16:56:37,579 p=27935 u=holms |  META: ran handlers
+2019-11-14 16:56:37,590 p=27935 u=holms |  PLAY [loadbal] ******************************************************************************************
+2019-11-14 16:56:37,597 p=27935 u=holms |  TASK [Gathering Facts] **********************************************************************************
+2019-11-14 16:56:37,598 p=27935 u=holms |  task path: /home/holms/projects/ansible-edu/03-install-nginx.yml:5
+2019-11-14 16:56:41,403 p=27935 u=holms |  ok: [an-suse]
+2019-11-14 16:56:41,404 p=27935 u=holms |  META: ran handlers
+2019-11-14 16:56:41,421 p=27935 u=holms |  TASK [nginx-lb : Configure Load Balancer] ***************************************************************
+2019-11-14 16:56:41,421 p=27935 u=holms |  task path: /home/holms/projects/ansible-edu/roles/nginx-lb/tasks/main.yml:2
+2019-11-14 16:56:44,867 p=27935 u=holms |  ok: [an-suse] => {"changed": false, "checksum": "ee6b2724bbe072e40471e20fb59d70384f8f6bf1", "dest": "/etc/nginx/nginx.conf", "gid": 0, "group": "root", "mode": "0644", "owner": "root", "path": "/etc/nginx/nginx.conf", "size": 580, "state": "file", "uid": 0}
+2019-11-14 16:56:44,868 p=27935 u=holms |  META: ran handlers
+2019-11-14 16:56:44,868 p=27935 u=holms |  META: ran handlers
+2019-11-14 16:56:44,869 p=27935 u=holms |  PLAY RECAP **********************************************************************************************
+2019-11-14 16:56:44,869 p=27935 u=holms |  an-cent                    : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-11-14 16:56:44,869 p=27935 u=holms |  an-fed                     : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-11-14 16:56:44,870 p=27935 u=holms |  an-lb                      : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2019-11-14 16:56:44,870 p=27935 u=holms |  an-suse                    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

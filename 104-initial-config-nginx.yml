@@ -1,7 +1,7 @@
 ---
 - hosts: webservers
   tasks:
-
+# First version of initial config play
   - name: set start page on RHEL-bases distros
     template:
       src: roles/webservers/templates/index.html.j2

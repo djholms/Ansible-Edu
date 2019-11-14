@@ -1,0 +1,5 @@
+  - name: set start page on RHEL-bases distros
+    template:
+      src: roles/webservers/templates/index.html.j2
+      dest: "/usr/share/nginx/html/index.html"
+    become: yes
