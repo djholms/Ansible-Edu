@@ -1,0 +1,7 @@
+#- name: software management
+
+- hosts: client
+  become: yes
+
+  roles:
+    - package-mgmt

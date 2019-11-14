@@ -1,2 +1,9 @@
----
-# tasks file for package-mgmt
+- include: install.yml
+  tags:
+    - install
+    - never
+
+- include: uninstall.yml
+  tags:
+    - uninstall
+    - never

@@ -1,0 +1,7 @@
+- name: remove unzip and nano
+  package:
+    name: "{{ item }}"
+    state: absent
+  loop:
+    - unzip
+    - nano

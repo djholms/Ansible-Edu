@@ -1,0 +1,9 @@
+- name: install archivers
+  package:
+    name: "{{ item }}"
+    state: latest
+  loop: #"{{ zip, unzip, gzip, nano }}"
+    - zip
+    - unzip
+    - gzip
+    - nano
